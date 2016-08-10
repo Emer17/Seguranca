@@ -3,4 +3,5 @@ Repositorio dedicado a disciplina de Segurança e Auditoria de Sistemas. (UFFS- 
 
 Contem os seguintes trabalhos:
 
--Troca de chaves de Diffie-Hellman 
+-Diffie-Hellman 
+-AES 256
