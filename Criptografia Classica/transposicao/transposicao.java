@@ -37,8 +37,14 @@ public class transposicao{
         FileOutputStream w = new FileOutputStream(new File(local_descrip));
         this.linhas = chave;// pra descriptografar, é o processo contrario a chave vira as linhas.
         this.colunas = entrada.length/this.linhas;
-        w.write(transposta(criarMatriz(entrada)));//Primeiro cria a matriz, dps faz a transposta da transpota, que é a propria matriz original
+        w.write(transposta(criarMatriz(entrada)));//Primeiro cria a matriz, dps faz a transposta da transposta, que é a propria matriz original
         w.close();
+    }
+    public String[] ataqueEscuro(int key, byte[] textc, int op) throws IOException{
+        this.linhas = key;// pra descriptografar, é o processo contrario a chave vira as linhas.
+        this.colunas = textc.length/this.linhas;
+        if(op == 1) return new String(transposta(criarMatriz(textc)), "UTF-8").toLowerCase().split(" ");//OP 1: 75% de acerto, bem mais rápido.
+        else return new String(transposta(criarMatriz(textc)), "UTF-8").replaceAll("[^a-zA-Z1-9 ]", " ").toLowerCase().split(" ");//OP 2: 90% de acerto, porem mais lento.
     }
     public void ataqueClaro(){
         System.out.println("(ATAQUE CLARO) chave transposicao: " + criarMatriz(this.entrada).length);

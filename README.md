@@ -6,3 +6,15 @@ Contem os seguintes trabalhos:
 -Diffie-Hellman
 
 -AES 256
+
+-RSA
+
+-Certificado Digital
+
+-Buffer Overflow
+
+-Criptografia Classica
+
+-Ataque em claro
+
+-Força Bruta (Ataque Escuro)

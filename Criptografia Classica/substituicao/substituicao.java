@@ -20,12 +20,9 @@ public class substituicao{
     }
     public void descriptografar() throws IOException{
         FileOutputStream w = new FileOutputStream(new File("substituicao/outputs/out_descrip.txt"));
-        //System.out.println("tamanho: " +  hugo[3]+ " " + this.entrada[3]);
         for(int u = 0; u < entrada.length; u++){
-            //System.out.println("sdads " + Math.abs((int)this.entrada[u]));
             this.entrada[u] = (byte)this.ascii[Math.abs((int)this.entrada[u])];
         }
-            //this.entrada[u] = this.key[(int)this.entrada[u]];
         w.write(this.entrada);
         w.close();
     }

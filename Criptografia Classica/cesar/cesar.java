@@ -21,6 +21,12 @@ public class cesar{
         w.write(entrada);
         w.close();
     }
+    public String[] ataqueEscuro(int key, byte[] textc, int op) throws IOException{
+        for(int i = 0; i < textc.length; i++)
+            textc[i] = (byte)(( textc[i] - key)%256);
+        if(op == 1) return new String(textc, "UTF-8").toLowerCase().split(" ");//OP 1: 75% de acerto, bem mais rápido.
+        else return new String(textc, "UTF-8").replaceAll("[^a-zA-Z1-9 ]", " ").toLowerCase().split(" ");//OP 2: 90% de acerto, porem mais lento.
+    }
     public void ataqueClaro(byte textn){
         System.out.println("(ATAQUE CLARO) chave cesar: " + ((int) this.entrada[0] - textn));
     }
