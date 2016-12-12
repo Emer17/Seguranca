@@ -18,3 +18,5 @@ Contem os seguintes trabalhos:
 -Ataque em claro
 
 -Força Bruta (Ataque Escuro)
+
+-Padrões

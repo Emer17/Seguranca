@@ -21,7 +21,7 @@ public class substituicao{
     public void descriptografar() throws IOException{
         FileOutputStream w = new FileOutputStream(new File("substituicao/outputs/out_descrip.txt"));
         for(int u = 0; u < entrada.length; u++){
-            this.entrada[u] = (byte)this.ascii[Math.abs((int)this.entrada[u])];
+            //this.entrada[u] = (byte)this.ascii[Math.abs((int)this.entrada[u])];
         }
         w.write(this.entrada);
         w.close();
